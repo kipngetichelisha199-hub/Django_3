@@ -1,4 +1,8 @@
 from django.shortcuts import render
+from django.http import HttpResponse
+from .models import hobbies
+
+
 
 # Create your views here.
 def landing(request):
@@ -6,7 +10,8 @@ def landing(request):
     return render(request, 'hobbiesApp/landing.html', context)
 
 def home(request):
-    context = {'welcomeMessage': 'Welcome to the home page!! '} # dict that will hold out data
+    Hobbies=hobbies.objects.all
+    context = {"data":Hobbies} # dict that will hold out data
     return render(request, 'hobbiesApp/home.html', context)
 
 def about(request):

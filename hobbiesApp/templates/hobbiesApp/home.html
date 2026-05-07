@@ -12,11 +12,12 @@
 <div class="d-flex gap-3 bg-secondary-subtle py-5 px-3">
     <div>
         <div>
-            <img class="rounded-3" src="{% static 'images\pexels-curtis-adams-1694007-3935344.jpg' %}" height="300" width="400" alt="">
+            <img class="rounded-3" src="{% static 'images\pexels-curtis-adams-1694007-3935344.jpg' %}" height="300"
+                width="400" alt="">
             <h2 style="  font-family: 'Dancing Script', cursive;
                          font-optical-sizing: auto;
                          font-style: normal;">Humple place for leisure</h2>
-                         <button type="button" class="btn bg-warning">View Project</button>
+            <button type="button" class="btn bg-warning">View Project</button>
 
 
         </div>
@@ -27,24 +28,30 @@
         <h2 style="  font-family: 'Dancing Script', cursive;
                      font-optical-sizing: auto;
                      font-style: normal;">Grow and share fresh produce</h2>
-                     <button type="button" class="btn bg-warning">View Project</button>
+        <button type="button" class="btn bg-warning">View Project</button>
 
 
     </div>
 
     <div>
-        <img class="rounded-3" src="{% static 'images\matt-jones-9CPAjGVB378-unsplash.jpg' %}" height="300" width="400" alt="">
+        <img class="rounded-3" src="{% static 'images\matt-jones-9CPAjGVB378-unsplash.jpg' %}" height="300" width="400"
+            alt="">
         <h2 style=" font-family: 'Dancing Script', cursive;
                     font-optical-sizing: auto;
                     font-style: normal;">Hiking for a Cause</h2>
-                    <button type="button" class="btn bg-warning">View Project</button>
+        <button type="button" class="btn bg-warning">View Project</button>
 
 
     </div>
 </div>
 
+<div class="container">
+    {% for Hobbies in data %}
+    <h1>{{Hobbies.name}}</h1>
+    <h2>Age: {{Hobbies.age}}</h2>
+    <hr>
 
-
-
+    {% endfor %}
+</div>
 
 {% endblock %}
