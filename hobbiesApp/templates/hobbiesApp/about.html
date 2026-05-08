@@ -29,6 +29,15 @@
         <h3 class="fw-bold">Creative Arts</h3>
         </div>
 </div>
+<div class="container">
+    {% for Iterest in data %}
+    <h1>{{Iterest.name}}</h1>
+    <h2>Age: {{Interest.age}}</h2>
+    <hr>
+
+    {% endfor %}
+</div>
+
 </div>
 
 {% endblock %}

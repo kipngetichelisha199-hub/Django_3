@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import hobbies
+from .models import Iterest
 
 
 
@@ -15,7 +16,8 @@ def home(request):
     return render(request, 'hobbiesApp/home.html', context)
 
 def about(request):
-    context = {'welcomeMessage': 'Welcome to the about page!! '} # dict that will hold out data
+    
+    context = {} # dict that will hold out data
     return render(request, 'hobbiesApp/about.html', context)
 
 def contact(request):
